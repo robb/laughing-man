@@ -1,5 +1,21 @@
 $blue: #004E72
 
+@-webkit-keyframes rotate
+  from
+    -webkit-transform-origin: 170px 170px
+    -webkit-transform: rotate(0deg)
+  to
+    -webkit-transform-origin: 170px 170px
+    -webkit-transform: rotate(360deg)
+
+@-moz-keyframes rotate
+  from
+    -moz-transform-origin: 170px 170px
+    -moz-transform: rotate(0deg)
+  to
+    -moz-transform-origin: 170px 170px
+    -moz-transform: rotate(360deg)
+
 .outer
   display:       block
   width:         340px
@@ -10,12 +26,16 @@ $blue: #004E72
 
   background:    white
 
-.outer *
+  position:      relative
+
+.outer, .outer *
   margin:  0
   padding: 0
 
 .inner
-  position:      relative
+  position:      absolute
+  top:           39px
+  left:          39px
 
   display:       block
   width:         220px
@@ -24,9 +44,60 @@ $blue: #004E72
   border:        21px solid $blue
   border-radius: 220px
 
-  margin:        3px auto
-
   background:    white
+
+.hat
+  .tip
+    position:      absolute
+    top:           32px
+    left:          162px
+
+    display:       block
+    width:         16px
+    height:        10px
+
+    background:    $blue
+
+  .gap
+    position:      absolute
+    top:           153px
+    left:          39px
+
+    display:       block
+    width:         23px
+    height:        8px
+
+    background:    white
+
+  .edge
+    position:      absolute
+    top:           132px
+    left:          50px
+
+    display:       block
+    width:         230px
+    height:        21px
+
+    background:    $blue
+
+  .rim
+    position:      absolute
+    top:           132px
+    left:          278px
+
+    display:       block
+    width:         91px
+    height:        34px
+
+    border-top:    21px solid $blue
+    border-right:  21px solid $blue
+    border-bottom: 21px solid $blue
+    border-left:    0px solid white
+
+    border-top-right-radius:    78px
+    border-bottom-right-radius: 78px
+
+    background:    white
 
 .eye
   &.left
@@ -64,13 +135,15 @@ $blue: #004E72
     border-top-right-radius: 50px
 
 .smile-wrapper
+  position:      absolute
+  top:           127px
+  left:          14px
+
   display:       block
   width:         192px
   height:        80px
 
   overflow:      hidden
-
-  margin:        58% auto
 
   .smile
     position:      relative
@@ -115,3 +188,81 @@ $blue: #004E72
 
         border-bottom-left-radius:  135px
         border-bottom-right-radius: 135px
+
+cite
+  display:     block
+  width:       340px
+  height:      340px
+
+  font-family: Impact, Helvetica, Arial
+  font-style:  normal
+  font-size:   30px
+  color:       $blue
+
+  -webkit-animation-name:             rotate
+  -webkit-animation-duration:         8s
+  -webkit-animation-iteration-count:  infinite
+  -webkit-animation-timing-function:  linear
+
+  -moz-animation-name:             rotate
+  -moz-animation-duration:         8s
+  -moz-animation-iteration-count:  infinite
+  -moz-animation-timing-function:  linear
+
+  span
+    position:  absolute
+    top:       155px
+    left:      155px
+
+    display:   block
+    width:     30px
+    height:    30px
+
+    text-align: center
+
+  $rot:   -40
+  @for $i from 0 to 69
+    $scale: 1.2
+
+    @each $very_thin in 16, 28
+      @if $i - 1 == $very_thin
+        $scale: 0.6
+
+      @if $i - 2 == $very_thin
+        $scale: 0.8
+
+    @each $thin in 2, 8, 13, 50, 65
+      @if $i - 1 == $thin
+        $scale: 1
+
+      @if $i - 2 == $thin
+        $scale: 1.1
+
+    @each $wide in 10, 22, 41, 63
+      @if $i - 1 == $wide
+        $scale: 1.3
+
+      @if $i - 2 == $wide
+        $scale: 1.5
+
+    @each $space in 1, 9, 14, 18, 21, 26, 30, 38, 40, 44, 48, 51, 57, 68
+      @if $i - 1 == $space
+        $scale: 0.3
+
+    $rot: $rot + (360 / 69) * $scale
+
+    span:nth-child(69n+#{$i})
+      -webkit-transform: rotate(#{$rot}deg) translateY(-155px)
+      -moz-transform:    rotate(#{$rot}deg) translateY(-155px)
+
+#laughing-man
+  width:  360px
+  height: 360px
+  margin: 32px auto
+
+#about
+  width:  460px
+  margin: 32px auto
+
+  font-family: Helvetica, Arial, sans
+  line-height: 1.5em

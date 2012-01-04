@@ -1,19 +1,120 @@
 !!!
 %html
   %head
-    %title Laughing Man
+    %meta{:charset => 'utf8'}
+    %title The Laughing Man Logo built with HTML and CSS 3
     %link{:rel => "stylesheet", :type => "text/css", :href => "./laughing-man.css"}
+  :javascript
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20850973-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
   %body
-    .outer
-      %cite
-        I thought what I'd do was, I'd pretend I was one of those deaf-mutes
-      .inner
+    #laughing-man
+      .outer
+        .inner
+          .eye.left
+            .mask
+          .eye.right
+            .mask
+          .smile-wrapper
+            .smile
+              .mask-wrapper
+                .mask
+        %cite
+          %span I
+          %span &nbsp;
+          %span t
+          %span h
+          %span o
+          %span u
+          %span g
+          %span h
+          %span t
+          %span &nbsp;
+          %span w
+          %span h
+          %span a
+          %span t
+          %span &nbsp;
+          %span I
+          %span '
+          %span d
+          %span &nbsp;
+          %span d
+          %span o
+          %span &nbsp;
+          %span w
+          %span a
+          %span s
+          %span ,
+          %span &nbsp;
+          %span I
+          %span '
+          %span d
+          %span &nbsp;
+          %span p
+          %span r
+          %span e
+          %span t
+          %span e
+          %span n
+          %span d
+          %span &nbsp;
+          %span I
+          %span &nbsp;
+          %span w
+          %span a
+          %span s
+          %span &nbsp;
+          %span o
+          %span n
+          %span e
+          %span &nbsp;
+          %span o
+          %span f
+          %span &nbsp;
+          %span t
+          %span h
+          %span o
+          %span s
+          %span e
+          %span &nbsp;
+          %span d
+          %span e
+          %span a
+          %span f
+          %span -
+          %span m
+          %span u
+          %span t
+          %span e
+          %span s
+          %span &nbsp;
         .hat
-        .eye.left
-          .mask
-        .eye.right
-          .mask
-        .smile-wrapper
-          .smile
-            .mask-wrapper
-              .mask
+          .tip
+          .edge
+          .gap
+          .rim
+    #about
+      %p
+        The <b>Laughing Man</b> (笑い男) is a notorious hacker in the
+        anime series Ghost in the Shell: Stand Alone Complex, well
+        known for superimposing his animated logo over his face by
+        hacking into the cybernetic eyes of onlookers.
+
+      <iframe width="460" height="315" src="http://www.youtube.com/embed/I7n8eQDsVSQ" frameborder="0" allowfullscreen></iframe>
+
+      %p
+        This Logo was built using only CSS and HTML, no JavaScript was
+        used.
+
+      %p
+        Built by
+        %a{:href => "http://robb.is"}
+          Robert Böhnke
