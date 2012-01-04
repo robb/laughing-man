@@ -20,45 +20,6 @@
   margin: 3px auto;
   background: white; }
 
-.smile-wrapper {
-  display: block;
-  width: 192px;
-  height: 80px;
-  overflow: hidden;
-  margin: 58% auto; }
-
-.smile {
-  position: relative;
-  top: -25px;
-  display: block;
-  width: 192px;
-  height: 105px;
-  background: #004e72;
-  border-left: 0 solid;
-  border-right: 0 solid;
-  border-bottom: 0 solid;
-  border-top: none;
-  border-bottom-left-radius: 210px;
-  border-bottom-right-radius: 210px; }
-  .smile .mask-wrapper {
-    position: absolute;
-    bottom: 23px;
-    left: 23px;
-    display: block;
-    width: 145px;
-    height: 36px;
-    overflow: hidden;
-    margin: auto; }
-    .smile .mask-wrapper .mask {
-      position: absolute;
-      bottom: 0px;
-      display: block;
-      width: 145px;
-      height: 72px;
-      background: white;
-      border-bottom-left-radius: 135px;
-      border-bottom-right-radius: 135px; }
-
 .eye {
   position: absolute;
   top: 100px;
@@ -83,3 +44,41 @@
     background: white;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px; }
+
+.smile-wrapper {
+  display: block;
+  width: 192px;
+  height: 80px;
+  overflow: hidden;
+  margin: 58% auto; }
+  .smile-wrapper .smile {
+    position: relative;
+    top: -25px;
+    display: block;
+    width: 192px;
+    height: 105px;
+    background: #004e72;
+    border-left: 0 solid;
+    border-right: 0 solid;
+    border-bottom: 0 solid;
+    border-top: none;
+    border-bottom-left-radius: 210px;
+    border-bottom-right-radius: 210px; }
+    .smile-wrapper .smile .mask-wrapper {
+      position: absolute;
+      bottom: 23px;
+      left: 23px;
+      display: block;
+      width: 145px;
+      height: 36px;
+      overflow: hidden;
+      margin: auto; }
+      .smile-wrapper .smile .mask-wrapper .mask {
+        position: absolute;
+        bottom: 0px;
+        display: block;
+        width: 145px;
+        height: 72px;
+        background: white;
+        border-bottom-left-radius: 135px;
+        border-bottom-right-radius: 135px; }
