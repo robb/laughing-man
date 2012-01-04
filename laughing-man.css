@@ -15,35 +15,46 @@
   display: block;
   width: 220px;
   height: 220px;
-  border: 20px solid #004e72;
+  border: 21px solid #004e72;
   border-radius: 220px;
-  margin: auto;
+  margin: 3px auto;
   background: white; }
 
-.smile {
+.smile-wrapper {
   display: block;
-  width: 190px;
+  width: 192px;
   height: 80px;
   overflow: hidden;
-  margin: 57% auto; }
+  margin: 58% auto; }
 
-.upper {
+.smile {
   position: relative;
+  top: -25px;
   display: block;
-  width: 90%;
-  height: 21px;
-  margin: 0 5%;
-  background: #004e72; }
-
-.lower {
-  position: relative;
-  top: -41px;
-  display: block;
-  width: 150px;
-  height: 75px;
-  border-left: 21px solid #004e72;
-  border-right: 21px solid #004e72;
-  border-bottom: 21px solid #004e72;
+  width: 192px;
+  height: 105px;
+  background: #004e72;
+  border-left: 0 solid;
+  border-right: 0 solid;
+  border-bottom: 0 solid;
   border-top: none;
-  border-bottom-left-radius: 150px;
-  border-bottom-right-radius: 150px; }
+  border-bottom-left-radius: 210px;
+  border-bottom-right-radius: 210px; }
+  .smile .mask-wrapper {
+    position: absolute;
+    bottom: 23px;
+    left: 23px;
+    display: block;
+    width: 145px;
+    height: 36px;
+    overflow: hidden;
+    margin: auto; }
+    .smile .mask-wrapper .mask {
+      position: absolute;
+      bottom: 0px;
+      display: block;
+      width: 145px;
+      height: 72px;
+      background: white;
+      border-bottom-left-radius: 135px;
+      border-bottom-right-radius: 135px; }
